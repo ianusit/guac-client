@@ -2,7 +2,7 @@
 #
 cd /usr/local/tomcat/webapps/
 rm -r ROOT docs examples host-manager manager
-export VERSION="0.9.8"
+export VERSION="0.9.9"
 export DESTINATION="/opt/guacamole"
 mkdir -p "$DESTINATION"
 echo "Downloading JDBC auth version $VERSION ..."
