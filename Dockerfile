@@ -8,6 +8,8 @@ ENV GUAC_JDBC_VERSION=0.9.8
 COPY files/deploy.sh /deploy.sh
 COPY files/start.sh /start.sh
 
-RUN chmod +x /deploy.sh /start.sh && /deploy.sh
+RUN chmod +x /deploy.sh && chmod +x /start.sh
+
+RUN /deploy.sh
 
 CMD ["/start.sh" ]
