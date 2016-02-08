@@ -26,8 +26,7 @@ associate_postgresql() {
  ln -s /opt/guacamole/postgresql/postgresql-*.jar "$GUACAMOLE_LIB"
 ln -s /opt/guacamole/postgresql/guacamole-auth-*.jar "$GUACAMOLE_EXT"
  export PGPASSWORD=$POSTGRES_PASSWORD
- if [[ `psql -h $POSTGRES_HOSTNAME -p $POSTGRES_PORT -U $POSTGRES_USER -tAc "SELECT 1 FROM information_schema.tables
-WHERE table_name='guacamole_user'"` == "1" ]]
+ if [[ `psql -h $POSTGRES_HOSTNAME -p $POSTGRES_PORT -U $POSTGRES_USER -tAc "SELECT 1 FROM information_schema.tables WHERE table_name='guacamole_user'"` == "1" ]]
  then
  echo "Database already exists"
  else
